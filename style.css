@@ -1,0 +1,214 @@
+/* CSS Custom Properties */
+:root {
+  --color-primary: #6366f1;
+  --color-primary-hover: #4f46e5;
+  --color-secondary: #6b7280;
+  --color-success: #10b981;
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --border-radius: 16px;
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: var(--color-text);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Article (Profile Card) */
+article[data-testid="test-profile-card"] {
+  background: var(--color-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 100%;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+article[data-testid="test-profile-card"]:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Figure (Avatar) */
+figure.profile-avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  margin: 0;
+}
+
+figure.profile-avatar img[data-testid="test-user-avatar"] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Header */
+header.profile-header {
+  padding: 2rem 2rem 0;
+  text-align: center;
+}
+
+h2.profile-name {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+span[data-testid="test-user-name"] {
+  color: var(--color-text);
+}
+
+p.profile-bio[data-testid="test-user-bio"] {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+}
+
+time.profile-time[data-testid="test-user-time"] {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-success);
+  font-weight: 500;
+  display: block;
+}
+
+/* Nav (Social Links) */
+nav.profile-social {
+  padding: 1.5rem 2rem 0;
+}
+
+ul.social-links[data-testid="test-user-social-links"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.social-links li {
+  flex: 1 1 45%;
+  min-width: 120px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  text-decoration: none;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  background: var(--color-primary);
+  color: white;
+}
+
+.social-links a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Sections (Hobbies & Dislikes) */
+section.profile-hobbies,
+section.profile-dislikes {
+  padding: 1.5rem 2rem 0;
+}
+
+section h3 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+ul.hobbies-list[data-testid="test-user-hobbies"],
+ul.dislikes-list[data-testid="test-user-dislikes"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hobbies-list li,
+.dislikes-list li {
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  header.profile-header {
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  nav.profile-social,
+  section.profile-hobbies,
+  section.profile-dislikes {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  ul.social-links[data-testid="test-user-social-links"] {
+    flex-direction: column;
+  }
+
+  .social-links li {
+    flex: none;
+    min-width: auto;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* High Contrast */
+@media (prefers-contrast: high) {
+  article[data-testid="test-profile-card"] {
+    border: 2px solid black;
+  }
+}

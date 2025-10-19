@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark essien - Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="profile-card-container">
+      <article
+        class="profile-card"
+        data-testid="test-profile-card"
+        role="article"
+      >
+        <!-- Avatar Figure -->
+        <figure class="profile-avatar">
+          <img
+            src="/Mark-Essien-490x480.jpg"
+            alt="Mark Essien"
+            data-testid="test-user-avatar"
+            loading="lazy"
+          />
+        </figure>
+
+        <!-- Header with Name & Bio -->
+        <header class="profile-header">
+          <h2 class="profile-name" aria-label="mark essien">
+            <span data-testid="test-user-name">mark essien</span>
+          </h2>
+          <p class="profile-bio" data-testid="test-user-bio">
+            Passionate frontend developer crafting accessible, delightful user
+            experiences. Coffee enthusiast ☕ and weekend hiker.
+          </p>
+          <time class="profile-time" data-testid="test-user-time" datetime="">
+            Active: <span id="current-time-ms"></span> ms
+          </time>
+        </header>
+
+        <!-- Social Links Navigation -->
+        <nav class="profile-social" aria-label="Mark's social media profiles">
+          <ul
+            class="social-links"
+            data-testid="test-user-social-links"
+            role="list"
+          >
+            <li>
+              <a
+                href="https://x.com/markessien"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="test-user-social-twitter"
+                aria-label="Twitter profile"
+                tabindex="0"
+              >
+                🐦 X
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/markessien"
+                data-testid="test-user-social-github"
+                aria-label="GitHub profile"
+                tabindex="0"
+              >
+                🐙 GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com/in/markessien"
+                data-testid="test-user-social-linkedin"
+                aria-label="LinkedIn profile"
+                tabindex="0"
+              >
+                💼 LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Hobbies Section -->
+        <section class="profile-hobbies" aria-labelledby="hobbies-heading">
+          <h3 id="hobbies-heading">Hobbies</h3>
+          <ul class="hobbies-list" data-testid="test-user-hobbies" role="list">
+            <li>🌄 Hiking</li>
+            <li>☕ Coffee Tasting</li>
+            <li>🎸 Guitar</li>
+            <li>📚 Sci-Fi Books</li>
+          </ul>
+        </section>
+
+        <!-- Dislikes Section -->
+        <section class="profile-dislikes" aria-labelledby="dislikes-heading">
+          <h3 id="dislikes-heading">Dislikes</h3>
+          <ul
+            class="dislikes-list"
+            data-testid="test-user-dislikes"
+            role="list"
+          >
+            <li>🌶️ Spicy Food</li>
+            <li>🚗 Traffic</li>
+            <li>📱 Long Meetings</li>
+            <li>❄️ Cold Weather</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
