@@ -12,6 +12,10 @@ body {
   background-color: #f8fafc;
 }
 
+.nav-link {
+  color: #1f2937;
+}
+
 main {
   min-height: 100vh;
   display: flex;

@@ -32,6 +32,10 @@ body {
   padding: 2rem;
 }
 
+.nav-link {
+  color: var(--color-text);
+}
+
 .profile-card-container {
   display: flex;
   justify-content: center;
