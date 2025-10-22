@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="about.css" />
+  </head>
+  <body>
+    <nav class="navbar" data-testid="test-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Profile</a></li>
+        <li>
+          <a href="about.html" class="nav-link active" aria-current="page"
+            >About Me</a
+          >
+        </li>
+        <li><a href="contact-us.html" class="nav-link">Contact Us</a></li>
+      </ul>
+    </nav>
+    <main data-testid="test-about-page">
+      <header class="page-header">
+        <h1>About Me</h1>
+        <p class="subtitle">
+          A journey of growth, learning, and self-discovery
+        </p>
+      </header>
+
+      <article class="about-content">
+        <!-- Bio Section -->
+        <section data-testid="test-about-bio" class="about-section">
+          <h2 class="section-title">Bio</h2>
+          <div class="section-content">
+            <p>
+              I'm a passionate learner currently enrolled in a comprehensive web
+              development program. With a background in design thinking and
+              creative problem-solving, I'm transitioning into the world of code
+              to build meaningful digital experiences. My journey began with a
+              curiosity about how websites work behind the scenes, and now I'm
+              dedicated to mastering the craft of creating intuitive,
+              accessible, and beautiful web applications.
+            </p>
+            <p>
+              When I'm not coding, you can find me exploring new hiking trails,
+              reading science fiction novels, or experimenting with digital art.
+              I believe that the best solutions come from combining creativity
+              with technical precision, and I'm excited to bring that philosophy
+              to every project I undertake.
+            </p>
+          </div>
+        </section>
+
+        <!-- Goals Section -->
+        <section data-testid="test-about-goals" class="about-section">
+          <h2 class="section-title">Goals in This Program</h2>
+          <div class="section-content">
+            <h3 class="goal-subtitle">Short-term (Next 3 Months)</h3>
+            <ul class="goal-list">
+              <li>Master HTML, CSS, and JavaScript fundamentals</li>
+              <li>Build 5 complete responsive websites</li>
+              <li>Understand accessibility best practices</li>
+              <li>Learn Git and version control workflows</li>
+            </ul>
+
+            <h3 class="goal-subtitle">Long-term (Program Completion)</h3>
+            <ul class="goal-list">
+              <li>
+                Develop a professional portfolio showcasing diverse projects
+              </li>
+              <li>Collaborate on team-based development projects</li>
+              <li>Gain confidence in debugging and problem-solving</li>
+              <li>Prepare for entry-level frontend development roles</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Areas of Low Confidence -->
+        <section data-testid="test-about-confidence" class="about-section">
+          <h2 class="section-title">Areas of Low Confidence</h2>
+          <div class="section-content">
+            <div class="confidence-grid">
+              <div class="confidence-item">
+                <h3>JavaScript Algorithms</h3>
+                <p>
+                  I'm still working on understanding complex data structures and
+                  algorithmic thinking. While I can build functional interfaces,
+                  I want to deepen my knowledge of efficient problem-solving
+                  patterns.
+                </p>
+              </div>
+
+              <div class="confidence-item">
+                <h3>CSS Grid & Flexbox</h3>
+                <p>
+                  Basic layouts are becoming comfortable, but I struggle with
+                  more advanced grid patterns and responsive breakpoints. I need
+                  more practice with real-world layout challenges.
+                </p>
+              </div>
+
+              <div class="confidence-item">
+                <h3>Debugging Complex Issues</h3>
+                <p>
+                  Finding and fixing bugs in larger codebases feels
+                  overwhelming. I want to develop systematic debugging
+                  approaches and become more comfortable reading error messages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Note to Future Self -->
+        <section data-testid="test-about-future-note" class="about-section">
+          <h2 class="section-title">Note to My Future Self</h2>
+          <div class="section-content">
+            <blockquote class="future-note">
+              <p>Hey future me,</p>
+
+              <p>
+                Remember that feeling of excitement when you first understood
+                how CSS transforms work? That moment when a stubborn layout
+                finally clicked? Hold onto that curiosity. The challenges you're
+                facing now—the ones that keep you up at 2 AM—are building the
+                developer you'll be proud of.
+              </p>
+
+              <p>
+                Don't forget why you started: to create things that make
+                people's lives easier, to solve problems with elegance, to turn
+                "impossible" into "that's actually pretty straightforward."
+                You're not just learning code; you're learning how to think like
+                a builder, a problem-solver, a maker.
+              </p>
+
+              <p>
+                Keep experimenting. Keep asking questions. Keep celebrating the
+                small wins. You've got this.
+              </p>
+
+              <footer class="blockquote-footer">
+                — Present You, who believes in Future You
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+
+        <!-- Extra Thoughts -->
+        <section data-testid="test-about-extra" class="about-section">
+          <h2 class="section-title">Extra Thoughts</h2>
+          <div class="section-content">
+            <div class="thoughts-container">
+              <div class="thought-card">
+                <h3>The Power of Patience</h3>
+                <p>
+                  I've learned that coding is as much about patience as it is
+                  about logic. Sometimes the solution isn't about working
+                  harder, but about stepping back and seeing the problem from a
+                  different angle.
+                </p>
+              </div>
+
+              <div class="thought-card">
+                <h3>Community Matters</h3>
+                <p>
+                  One of the biggest surprises has been how supportive the
+                  developer community is. Stack Overflow, GitHub, and online
+                  forums have shown me that no one succeeds alone—we all stand
+                  on the shoulders of those who came before us.
+                </p>
+              </div>
+
+              <div class="thought-card">
+                <h3>Design Meets Code</h3>
+                <p>
+                  There's a beautiful intersection between design and
+                  development that I'm just beginning to explore. Clean code
+                  isn't just functional—it's elegant, readable, and maintains
+                  the same care as great design.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <script src="about.js"></script>
+  </body>
+</html>

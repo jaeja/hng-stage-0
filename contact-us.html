@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="nav.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <nav class="navbar" data-testid="test-nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Profile</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li>
+          <a href="contact.html" class="nav-link active" aria-current="page"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main data-testid="test-contact-main">
+      <section class="contact-container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" data-testid="test-contact-form" novalidate>
+          <div class="form-group">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              data-testid="test-contact-name"
+              aria-describedby="name-error"
+              required
+            />
+            <span
+              id="name-error"
+              class="error-message"
+              data-testid="test-contact-error-name"
+              role="alert"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              data-testid="test-contact-email"
+              aria-describedby="email-error"
+              required
+            />
+            <span
+              id="email-error"
+              class="error-message"
+              data-testid="test-contact-error-email"
+              role="alert"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              data-testid="test-contact-subject"
+              aria-describedby="subject-error"
+              required
+            />
+            <span
+              id="subject-error"
+              class="error-message"
+              data-testid="test-contact-error-subject"
+              role="alert"
+            ></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              data-testid="test-contact-message"
+              aria-describedby="message-error"
+              required
+            ></textarea>
+            <span
+              id="message-error"
+              class="error-message"
+              data-testid="test-contact-error-message"
+              role="alert"
+            ></span>
+          </div>
+
+          <button
+            type="submit"
+            data-testid="test-contact-submit"
+            class="submit-btn"
+          >
+            Send Message
+          </button>
+
+          <div
+            id="success-message"
+            class="success-message"
+            data-testid="test-contact-success"
+            role="alert"
+            aria-live="polite"
+          >
+            Thank you! Your message has been sent successfully. We'll get back
+            to you within 24 hours.
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script src="contact.js"></script>
+  </body>
+</html>
